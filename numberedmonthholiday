@@ -1,0 +1,26 @@
+"""
+Mark Vang
+ENTD200 B004 Winter 2021
+Professor Allen Jordan
+Week 8
+02/23/2021
+"""
+
+Month = ("January", "February", "March", "April", "May", "June", "July",
+         "August", "September", "October", "November", "December")
+Holidays = dict(
+    January="...Happy New Year!", February="...Happy Valentine!",
+    July="...Happy Fourth of July!", October="...Happy Halloween!",
+    November="...Happy Thanksgiving!", December="...Merry Christmas!")
+
+
+def months():
+    for number, month in enumerate(Month):
+        message = ""
+        try:
+            message = Holidays[month]
+        except:
+            pass
+        print("Month", number + 1, "is", month, message)
+
+months()
